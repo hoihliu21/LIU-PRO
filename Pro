@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>Chào mừng đến với trang cá nhân của tôi!</h1>
-        <p>Tôi là [Tên của bạn], một [nghề nghiệp hoặc sở thích của bạn].</p>
+        <p>Tôi là Hốih Liu, một người điềm đạm trầm lắng</p>
     </header>
     <section>
         <h2>Giới thiệu</h2>
@@ -27,7 +27,7 @@
     </section>
     <section>
         <h2>Liên hệ</h2>
-        <p>Email: your.email@example.com</p>
+        <p>Email:hoihliu21@gmail.com</p>
     </section>
 </body>
 </html>
