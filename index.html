@@ -1,173 +1,157 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Bán Acc Game</title>
-    <style>
-        /* Reset mặc định */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #f7f9fc;
-            padding: 20px;
-        }
-
-        header {
-            background-color: #3498db;
-            padding: 20px 0;
-            text-align: center;
-            color: white;
-            margin-bottom: 30px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 2.5em;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-align: center;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .card h3 {
-            margin: 15px 0 10px;
-            color: #333;
-        }
-
-        .card p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-size: 18px;
-            font-weight: bold;
-            color: #e74c3c;
-            margin-bottom: 15px;
-        }
-
-        .buy-btn {
-            display: inline-block;
-            background-color: #2ecc71;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .buy-btn:hover {
-            background-color: #27ae60;
-        }
-
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            color: #888;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giới thiệu bản thân</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg-light: #f8f9fa;
+      --bg-dark: #1e1e1e;
+      --text-light: #333;
+      --text-dark: #f1f1f1;
+      --card-light: #fff;
+      --card-dark: #2c2c2c;
+      --primary: #0077b6;
+      --primary-hover: #023e8a;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: var(--card-light);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+    body.dark .container {
+      background-color: var(--card-dark);
+    }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid var(--primary);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .social-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .social-links li a {
+      text-decoration: none;
+      color: white;
+      background-color: var(--primary);
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .social-links li a:hover {
+      background-color: var(--primary-hover);
+    }
+    .button {
+      margin: 10px 5px;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      background-color: var(--primary);
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: var(--primary-hover);
+    }
+    form {
+      margin-top: 30px;
+      text-align: left;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    form button {
+      width: 100%;
+    }
+    @media (max-width: 600px) {
+      .social-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .social-links li a {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    <h1>Shop Bán Acc Game Uy Tín</h1>
-</header>
-
-<div class="container">
-    <!-- Sản phẩm 1 -->
-    <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Acc+Liên+Quân" alt="Acc Liên Quân">
-        <h3>Acc Liên Quân VIP</h3>
-        <p>Rank Cao Thủ, nhiều skin hiếm</p>
-        <div class="price">500.000đ</div>
-        <a href="#" class="buy-btn">Mua Ngay</a>
+  <div class="container">
+    <img src="avatar.jpg" alt="Ảnh đại diện" class="avatar" />
+    <h1>Xin chào, mình là Hốih Liu</h1>
+    <p>Mình là một người yêu thích công nghệ và phát triển web. Hãy kết nối với mình nhé!</p>
+    <ul class="social-links">
+      <li><a href="https://www.facebook.com/share/191oeycRtT/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+      <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+      <li><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+    </ul>
+    <div>
+      <a href="cv.pdf" download class="button"><i class="fas fa-download"></i> Tải CV</a>
+      <button class="button" onclick="toggleDarkMode()"><i class="fas fa-adjust"></i> Chuyển chế độ</button>
     </div>
-
-    <!-- Sản phẩm 2 -->
-    <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Acc+Free+Fire" alt="Acc Free Fire">
-        <h3>Acc Free Fire Đẹp</h3>
-        <p>Rank Kim Cương, đồ hiếm</p>
-        <div class="price">350.000đ</div>
-        <a href="#" class="buy-btn">Mua Ngay</a>
-    </div>
-
-    <!-- Sản phẩm 3 -->
-    <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Acc+PUBG+Mobile" alt="Acc PUBG">
-        <h3>Acc PUBG Mobile</h3>
-        <p>Top server, full đồ VIP</p>
-        <div class="price">600.000đ</div>
-        <a href="#" class="buy-btn">Mua Ngay</a>
-    </div>
-
-    <!-- Thêm sản phẩm khác nếu muốn -->
-</div>
-
-<footer>
-    © 2025 Shop Bán Acc Game. All rights reserved.
-</footer>
-
+    <form onsubmit="submitForm(event)">
+      <h2>Liên hệ với mình</h2>
+      <input type="text" placeholder="Họ và tên" required />
+      <input type="email" placeholder="Email của bạn" required />
+      <textarea rows="4" placeholder="Nội dung liên hệ..." required></textarea>
+      <button type="submit" class="button">Gửi liên hệ</button>
+    </form>
+  </div>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+    function submitForm(e) {
+      e.preventDefault();
+      alert('Cảm ơn bạn đã gửi liên hệ!');
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
-
-<div class="container">
-    <!-- Sản phẩm 1 -->
-    <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Acc+Liên+Quân" alt="Acc Liên Quân">
-        <h3>Acc Liên Quân VIP</h3>
-        <p>Rank Cao Thủ, nhiều skin hiếm</p>
-        <div class="price">500.000đ</div>
-        <a href="https://facebook.com/yourprofile" class="buy-btn" target="_blank">Mua Ngay</a>
-    </div>
-
-    <!-- Sản phẩm 2 -->
-    <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Acc+Free+Fire" alt="Acc Free Fire">
-        <h3>Acc Free Fire Đẹp</h3>
-        <p>Rank Kim Cương, đồ hiếm</p>
-        <div class="price">350.000đ</div>
-        <a href="https://zalo.me/yourzalonumber" class="buy-btn" target="_blank">Mua Ngay</a>
-    </div>
-
-    <!-- Sản phẩm 3 -->
-    <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Acc+PUBG+Mobile" alt="Acc PUBG">
-        <h3>Acc PUBG Mobile</h3>
-        <p>Top server, full đồ VIP</p>
-        <div class="price">600.000đ</div>
-        <a href="https://yourshop.com/order" class="buy-btn" target="_blank">Mua Ngay</a>
-    </div>
-</div>
